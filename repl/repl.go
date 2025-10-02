@@ -6,6 +6,7 @@
      "io"
      "github.com/HemanthBangera/PicoLang/lexer"
      "github.com/HemanthBangera/PicoLang/parser"
+     "github.com/HemanthBangera/PicoLang/evaluator"
  )
 
  const PROMPT = ">> "
@@ -29,16 +30,18 @@
              continue
          }
 
-         io.WriteString(out,program.String())
-         io.WriteString(out,"\n")
-
+         evaluated := evaluator.Eval(program)
+         if evaluated != nil {
+             io.WriteString(out, evaluated.Inspect())
+             io.WriteString(out,"\n")
+         }
      }
  }
 
  func printParserErrors(out io.Writer, errors []string) {
     io.WriteString(out, JOKER_FACE)
     io.WriteString(out, "Mind the syntax you fuckin fool!\n")
-    io.WriteString(out, " parser errors:\n") 
+    io.WriteString(out, "parser errors:\n") 
      for _, msg := range errors {
          io.WriteString(out,"\t"+msg+"\n")
      }
