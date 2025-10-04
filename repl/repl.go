@@ -7,12 +7,15 @@
      "github.com/HemanthBangera/PicoLang/lexer"
      "github.com/HemanthBangera/PicoLang/parser"
      "github.com/HemanthBangera/PicoLang/evaluator"
+     "github.com/HemanthBangera/PicoLang/object"
  )
 
  const PROMPT = ">> "
  const JOKER_FACE = "🫵🤡\n"
  func Start(in io.Reader,out io.Writer){
      scanner := bufio.NewScanner(in)
+     env := object.NewEnvironment()
+
      for {
          fmt.Printf(PROMPT)
          scanned := scanner.Scan()
@@ -30,7 +33,7 @@
              continue
          }
 
-         evaluated := evaluator.Eval(program)
+         evaluated := evaluator.Eval(program,env)
          if evaluated != nil {
              io.WriteString(out, evaluated.Inspect())
              io.WriteString(out,"\n")
