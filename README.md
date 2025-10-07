@@ -168,11 +168,11 @@ user["name"]; // => "Hemanth"
 ```
 ### Quick Start
 
-# Prerequisites
+#### Prerequisites
 - Go (v1.20+)
 - Unix-like OS (Linux/macOS/WSL)
 
-# Installation
+#### Installation
 ```bash
 # Clone the repository
 git clone https://github.com/HemanthBangera/PicoLang.git
