@@ -168,11 +168,11 @@ user["name"]; // => "Hemanth"
 ```
 ### Quick Start
 
-#Prerequisites
--Go (v1.20+)
--Unix-like OS (Linux/macOS/WSL)
+# Prerequisites
+- Go (v1.20+)
+- Unix-like OS (Linux/macOS/WSL)
 
-#Installation
+# Installation
 ```bash
 # Clone the repository
 git clone https://github.com/HemanthBangera/PicoLang.git
@@ -184,7 +184,7 @@ cd PicoLang
 go run main.go
 ```
 
-###Future improvements
+### Future improvements
 - Add while and for loops
 - Implement modules/imports
 - Expand built-in functions
@@ -193,9 +193,10 @@ go run main.go
 - Compile to bytecode (next phase: Writing a Compiler in Go)
  error recovery
 
-###Acknowledgements
+### Acknowledgements
 - Thorsten Ball - for the incredible book
-
+  
+---
 <p align="center">
   ⭐ <b>If you have made this far, please consider starring the repo!</b> ⭐
 </p>
