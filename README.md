@@ -190,8 +190,8 @@ go run main.go
 - Expand built-in functions
 - Improve error recovery in parser
 - Add unit test coverage
-- Compile to bytecode (next phase: Writing a Compiler in Go)
- error recovery
+- Compile to bytecode 
+
 
 ### Acknowledgements
 - Thorsten Ball - for the incredible book
